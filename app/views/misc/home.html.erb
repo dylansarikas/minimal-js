@@ -1,3 +1,5 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <h1>Cities</h1>
 
 <ul id="cities_list">
@@ -9,9 +11,32 @@
   <li id="sfo" class="west">San Francisco</li>
 </ul>
 
+<div id="bye">Click me</div>
+
 <script>
-  // Write your JS here.
-  // Open the JS console and refresh the page to see the output.
+$("body").on("click", "#bye", function() {
+  $(".west").slideToggle();
+});
+
+
+function fiizbuzz() {
+  console.log("howdy!");
+  for (let i = 1; i < 100; i++) {
+    let output = "";
+    if (i % 3 === 0){
+      output = output + "fizz";
+    }
+    if (i % 5 === 0){
+      output = output + "buzz";
+    }
+    if (output === ""){
+      output = i;
+    }
+    console.log(output);
+  }
+}
+
+fiizbuzz();
 
   
 </script>
